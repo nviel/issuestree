@@ -1,0 +1,22 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Octopus Project</title>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="{% static "ticket/jstree/themes/default/style.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "ticket/css/treeview.css" %}" />
+	</head>
+	<body>
+		<div id="container" role="main">
+			<div id="tree"></div>
+		</div>
+
+		<script src="{% static "ticket/jquery/jquery-1.11.3.js" %}"></script>
+		<script src="{% static "ticket/jstree/jstree.js" %}"></script>
+		<script src="{% static "ticket/js/treeview.js" %}"></script>
+	</body>
+</html>
