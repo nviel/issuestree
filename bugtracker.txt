@@ -1,3 +1,9 @@
+[   ] Projet
+  [   ] Revenir sur une base SQLite pour favoriser le déploiement (c'est un proto!)
+  [   ] passer en python 3.x
+    [   ] maîtriser le virtualenv
+
+
 [   ] faire communiquer les vues entre elles
   [ok?] lister les events qui doivent déclencher une mise à jour
     [ * ] ticket_select
