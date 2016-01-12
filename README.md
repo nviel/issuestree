@@ -11,23 +11,29 @@ The aim is to test some features that  are rarely implemented anywhere else. For
 
 
 ## Install
+### Django
 ```bash
 sudo apt-get install python-django
 ```
 Yes it use django... Why not? This is a prototype.
 
+### Database: postgresql
 **FIXME**: do not forget the database manager!
 
+### Database: mysql
 
+
+### get the code
 ```bash
 git clone https://github.com/nviel/issuestree
 ```
 
+### configure your instance
 database initialization:
 configure the DATABASES dict in `octopus/settings.py`
 
 
-## Who to launch development server
+## How to launch development server (django mini server):
 ```bash
 cd issuestree
 python manage.py runserver [port (default is 8000)]
