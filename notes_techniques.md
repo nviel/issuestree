@@ -1,18 +1,33 @@
 # notes techniques:
 
+## lancer le serveur de test
+```bash
+python manage.py runserver
+```
+
+## initialisation de la bdd
+
 source: https://docs.djangoproject.com/en/1.8/intro/tutorial01/
 
+calcul du patch de migration de la bdd
 ```bash
 python manage.py makemigrations ticket
 ```
-calcul le patch de migration de la bdd
 
+Affichage du sql qui sera exécuté
 ```bash
 python manage.py sqlmigrate ticket 0001
 ```
-retourne le sql qui sera exécuté
 
+Exécution de la migration nécessaire
 ```bash
 python manage.py migrate
 ```
-exécute la migration nécessaire
+
+
+## changement de BDD:
+Faire les changements dans le paragraphe DATABASES de `octopus/settings.py`.
+Lancer l'initialisation de la base:
+```bash
+python manage.py migrate
+```

@@ -1,0 +1,17 @@
+[
+  {
+    "model": "ticket.Ticket",
+    "pk": 0,
+    "fields": {
+      "title": "Root of the univers"
+    }
+  },
+  {
+    "model": "ticket.Ticket",
+    "pk": 1,
+    "fields": {
+      "title": "Initial Node",
+      "parent": "0"
+    }
+  }
+]

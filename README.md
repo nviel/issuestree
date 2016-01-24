@@ -17,12 +17,6 @@ sudo apt-get install python-django
 ```
 Yes it use django... Why not? This is a prototype.
 
-### Database: postgresql
-**FIXME**: do not forget the database manager!
-
-### Database: mysql
-
-
 ### get the code
 ```bash
 git clone https://github.com/nviel/issuestree
@@ -32,6 +26,11 @@ git clone https://github.com/nviel/issuestree
 database initialization:
 configure the DATABASES dict in `octopus/settings.py`
 
+Database initialization:
+```bash
+python manager.py migrate
+python manager.py loaddata initial_tree_data.json
+```
 
 ## How to launch development server (django mini server):
 ```bash
@@ -43,10 +42,10 @@ Then visit the site at `http://localhost:8000`
 
 ## Technical notes:
 * python 2.7 (but I will switch to 3.x soon)
-* django 
+* django
 * jquery
 * jstree
-* mysql or postgreSQL
+* sqlite (mysql or postgreSQL next)
 
 
 ## Update from an older version
