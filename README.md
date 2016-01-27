@@ -28,8 +28,8 @@ configure the DATABASES dict in `octopus/settings.py`
 
 Database initialization:
 ```bash
-python manager.py migrate
-python manager.py loaddata initial_tree_data.json
+python manage.py migrate
+python manage.py loaddata initial_tree_data.json
 ```
 
 ## How to launch development server (django mini server):
