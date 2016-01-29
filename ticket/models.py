@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
-# Create your models here.
-
 class Ticket(models.Model):
     # identifiant ajouté automatiquement par django:
     # id = models.AutoField(primary_key=True)

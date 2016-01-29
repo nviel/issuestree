@@ -1,7 +1,7 @@
 [   ] Projet
-  [   ] Revenir sur une base SQLite pour favoriser le déploiement (c'est un proto!)
+  [ok!] Revenir sur une base SQLite pour favoriser le déploiement (c'est un proto!)
+  [ok!] maîtriser le virtualenv pour installer la dernière version de Django
   [   ] passer en python 3.x
-    [   ] maîtriser le virtualenv
 
 
 [   ] faire communiquer les vues entre elles
@@ -17,18 +17,24 @@
   [...] menu contextuel
     [ok!] déploiement de l'arbre avec ajax (get_content)
     [ok!] renommer un noeud (rename_node)
-    [...] créer un noeud
+    [ok!] créer un noeud
       [ok ] URL, controleur, tree_view
-      [   ] changer le nom du noeud
+      [ok!] changer le nom du noeud
     [ok!] déplacer un noeud
     [   ] le raffraichissement complet de l'arbre à l'occasion du déplacement d'un noeud est déplaisant.
     [...] supprimer un noeud
       [ok!] sans précautions
-      [] avec message de confirmation
-      [] avec tous les enfants récursivement
+      [ok!] avec tous les enfants récursivement
+        En fait django le fait tout seul parce que sinon il y aurait une rupture d'intégrité avec les enfants
+      [  ] avec message de confirmation indiquant que tous les enfants vont être supprimés.
+    [  ] Raccourcis clavier.
+    [  ] filtrage sur le statut
+    [  ] tri de l'arbre sur un ordre défini 'order' (aujourd'hui c'est l'ordre alphabetique!)
 
-  [   ] Affichage
-    [   ] il manque les pointillés verticaux reliants le père à ses enfants (autre que le premier)
+  [ok!] Affichage
+    [ok!] il manque les pointillés verticaux reliants le père à ses enfants (autre que le premier)
+        visiblement c'est revenu quand j'ai réactivé le code qui surchargeait le menu create_node.
+        C'est probablement parce que c'est là que le type du node est défini.
 
 [   ] Vue de détail
     [   ] afficher le contenu d'un noeud dans la vue détail (get_content)
@@ -49,3 +55,5 @@
     [ ? ] Ne pas oublier qu'il ne s'agit que d'un prototype pour évaluer les nouveaux principes.
     [ X ] Le controleur rename_node prend le parametre new_title. Ce serait plus homogène si c'était title.
     [ X ] Le controleur rename_node devrait sans doute être update_node avec la liste des champs/valuers à mettre à jour.
+[   ] Déploiement
+  [   ] déployer sur mon raspberry pour remplacer ce fichier et commencer à utiliser l'outil.

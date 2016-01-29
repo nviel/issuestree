@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from models import Ticket
 
 import json
+import logging
+
+logger = logging.getLogger("django")
 
 #-------------------------------------------------------------------------------
 def index(request):
@@ -62,11 +65,9 @@ def create_node(request, parent_id, title):
 
     node = Ticket(parent = parent_node, title = title)
     node.save()
-    return HttpResponse(str(node.id))
+    return HttpResponse('{"id":'+str(node.id)+'}', content_type="application/json")
 
-# Supprime un noeud
-# FIXME: ne supprime que le noeud désigné. Il est probable que le comportement
-# souhaité à terme sera de supprimer également tous les enfants récurcivement.
+# Supprime un noeud et tous ces enfants
 #-------------------------------------------------------------------------------
 def delete_node(request, node_id):
     try:
@@ -74,7 +75,7 @@ def delete_node(request, node_id):
     except Exception as e:
         return HttpResponse(str(e), status = 400)
 
-    node.delete()
+    node.delete() # children are deleted too because of their ForeignKey.
     return HttpResponse(str(node.id))
 
 # Déplace un noeud dans l'arbre
