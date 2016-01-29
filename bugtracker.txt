@@ -1,6 +1,6 @@
 [   ] Projet
   [ok!] Revenir sur une base SQLite pour favoriser le déploiement (c'est un proto!)
-  [ok!] maîtriser le virtualenv pour installer la dernière version de Django
+  [ok!] maîtriser le virtualenv pour installer la dernière version de Django (1.9)
   [   ] passer en python 3.x
 
 
@@ -47,7 +47,7 @@
 
 [   ] Vue document
 
-[   ] Développement
+[   ] Architecture
   [   ] le serveur devrait exposer une API de type REST.
     [ ? ] Pourquoi? Quel est le gain?
     [ * ] Il faudrait utiliser les méthodes GET/POST/UPDATE
@@ -55,5 +55,10 @@
     [ ? ] Ne pas oublier qu'il ne s'agit que d'un prototype pour évaluer les nouveaux principes.
     [ X ] Le controleur rename_node prend le parametre new_title. Ce serait plus homogène si c'était title.
     [ X ] Le controleur rename_node devrait sans doute être update_node avec la liste des champs/valuers à mettre à jour.
-[   ] Déploiement
+
+[   ] Déploiement / hébergement
   [   ] déployer sur mon raspberry pour remplacer ce fichier et commencer à utiliser l'outil.
+    [   ] brancher sur nginx
+    [   ] utiliser une authentification gitHub
+    [   ] controler l'accès à l'application
+    [   ] sauvegarder la base régulièrement (ailleurs que sur le raspberry)
